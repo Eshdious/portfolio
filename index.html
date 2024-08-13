@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- setting the document type and language to english -->
+    <meta charset="UTF-8"> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ensures proper scaling on mobile devices -->
+   
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- linking the external css file for styling -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- linking the favicon for the website -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- setting the title of the webpage -->
+    <title>Shima Jafari Portfolio</title>
+</head>
+<body>
+    <!-- main container wrapping all content -->
+    <div class="container">
+        <!-- navigation bar with logo, menu, and download button -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Shima Jafari</p> <!-- displays the name in the nav bar -->
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <!-- unordered list of navigation links -->
+                <ul class="nav_menu_list">
+                    <li class="nav_list"><a href="#home" class="nav-link active-link">Home</a></li> <!-- link to home section -->
+                    <li class="nav_list"><a href="#about" class="nav-link">About</a></li> <!-- link to about section -->
+                    <li class="nav_list"><a href="#projects" class="nav-link">Projects</a></li> <!-- link to projects section -->
+                    <li class="nav_list"><a href="#contact" class="nav-link">Contact</a></li> <!-- link to contact section -->
+                </ul>
+            </div>
+            <div class="nav-button">
+                <!-- button to download the cv/resume -->
+                <a href="ShimaJafari.pdf" download="Shima_Jafari_Resume.pdf"><button class="btn">Download CV <i class="uil uil-file-alt"></i></button></a>
+            </div>
+        </nav>
+
+        <!-- main content area starts here -->
+        <main class="wrapper">
+            <!-- featured section with image and text -->
+            <section class="featured-box" id="home">
+                <div class="featured-image">
+                    <div class="image"><img src="assets/images/Shima.png" alt="Shima Jafari" id="shima-image"></div> <!-- profile image -->
+                </div>
+                <div class="featured-text">
+                    <div class="featured-text-card"><span>Shima Jafari</span></div> <!-- name display -->
+                    <div class="featured-name"><p>I'm <span class="rotating-text">Content Creator</span></p></div> <!-- profession with rotating text effect -->
+                    <div class="featured-text-info"><p>Experienced content creator and video editor with a passion for creating visually stunning and user-friendly websites.</p></div>
+                    <div class="featured-text-btn">
+                        <!-- buttons for hire me, learn more, and contact me -->
+                        <button class="btn primary">Hire Me</button>
+                        <button class="btn secondary">Learn More</button>
+                        <button class="btn accent">Contact Me</button>
+                    </div>
+                    <div class="social_icons">
+                        <!-- social media icons with links -->
+                        <a href="https://www.instagram.com" target="_blank" class="icon"><i class="uil uil-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon"><i class="uil uil-linkedin-alt"></i></a>
+                        <a href="https://dribbble.com/yourprofile" target="_blank" class="icon"><i class="uil uil-dribbble"></i></a>
+                        <a href="https://github.com/yourprofile" target="_blank" class="icon"><i class="uil uil-github-alt"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- about section with details -->
+            <section class="section" id="about">
+                <div class="top-header"><h1>About Me</h1></div> <!-- section header -->
+                <div class="about-info">
+                    <p>I am a content creator and video editor with over 5 years of experience. Worked with professional YouTube channels with over 100k subscribers.</p> <!-- about text -->
+                    <p>Skills include management, video editing, content creation, expertise in Photoshop, Illustrator, Adobe XD, Unity, photography, creativity, critical thinking, and communication.</p> <!-- skills list -->
+                    <p>Currently pursuing a Diploma in Interactive Media Design at Seneca College.</p> <!-- current education -->
+                    <a href="ShimaJafari.pdf" download="Shima_Jafari_Resume.pdf"><button class="btn">Download CV <i class="uil uil-import"></i></button></a> <!-- download cv button -->
+                </div>
+            </section>
+
+            <!-- projects section showcasing work -->
+            <section class="section" id="projects">
+                <div class="top-header"><h1>Projects</h1></div> <!-- section header -->
+                <div class="project-container">
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Project 1</h3> <!-- project title -->
+                        <video width="320" height="240" controls> <!-- video of the project -->
+                            <source src="assets/13580749-uhd_3840_2160_60fps.mp4" type="video/mp4"> <!-- video source -->
+                            Your browser does not support the video tag. <!-- fallback text -->
+                        </video>
+                        <label>Video Project</label> <!-- label for the project -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- contact section for getting in touch -->
+            <section class="section" id="contact">
+                <div class="top-header"><h1>Get in touch</h1><span>Do you have a project in your mind, contact me here</span></div> <!-- section header -->
+                <div class="contact-info">
+                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email: shymajfi@gmail.com</p> <!-- email contact -->
+                    <p><i class="uil uil-phone"></i> Tel: +604-364-7468</p> <!-- phone contact -->
+                </div>
+                <div class="form-control">
+                    <div class="form-inputs">
+                        <input type="text" class="input-field" placeholder="Name"> <!-- input field for name -->
+                        <input type="text" class="input-field" placeholder="Email"> <!-- input field for email -->
+                    </div>
+                    <textarea placeholder="Message"></textarea> <!-- text area for message -->
+                    <button class="btn">Send <i class="uil uil-message"></i></button> <!-- send button -->
+                </div>
+            </section>
+        </main>
+
+        <!-- footer section with additional links and dark mode toggle -->
+        <footer>
+            <div class="top-footer"><p>Shima Jafari</p></div> <!-- footer header with name -->
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list"><a href="#home">Home</a></li> <!-- footer links -->
+                    <li class="footer_menu_list"><a href="#about">About</a></li>
+                    <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+                    <li class="footer_menu_list"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <!-- social media links in the footer -->
+                <a href="https://www.instagram.com" target="_blank" class="icon"><i class="uil uil-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon"><i class="uil uil-linkedin-alt"></i></a>
+                <a href="https://dribbble.com/yourprofile" target="_blank" class="icon"><i class="uil uil-dribbble"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank" class="icon"><i class="uil uil-github-alt"></i></a>
+            </div>
+            <div class="bottom-footer"><p>Copyright &copy; <a href="#home" style="text-decoration: none">Shima Jafari</a> - All rights reserved</p></div> <!-- copyright text -->
+            <input type="checkbox" id="dark-mode-toggle"> <!-- dark mode toggle checkbox -->
+            <label for="dark-mode-toggle">Dark Mode</label> <!-- label for dark mode toggle -->
+        </footer>
+    </div>
+
+    <!-- scripts for additional functionality like scroll reveal and main js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+/* ----- ARIAL FONT ----- */
+body {
+  font-family: Arial, sans-serif; /* setting the default font to arial */
+}
+
+/* ----- VARIABLES ----- */
+:root {
+  /* defining css variables for color schemes */
+  --background-color-light: #000000;
+  --text-color-light: #D3D3D3;
+  --background-color-dark: #000000;
+  --text-color-dark: #A0AFB7;
+  --primary-color: #36454F; /* main color for buttons and highlights */
+  --primary-color-hover: #1E1E1E; /* hover effect color for primary elements */
+  --secondary-color: #808080; /* secondary color, used for less prominent elements */
+  --secondary-color-hover: #606060; /* hover effect color for secondary elements */
+  --accent-color: #A0AFB7; /* accent color for special elements */
+  --accent-color-hover: #707070; /* hover effect color for accent elements */
+  --body-color: #000000; /* background color of the body */
+  --color-white: #FFFFFF; /* color for white elements */
+  --text-color-second: #D3D3D3; /* secondary text color */
+  --text-color-third: #A0AFB7; /* third-level text color */
+}
+
+/* styles for the dark mode toggle */
+input[type="checkbox"] {
+  display: none; /* hides the checkbox itself */
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer; /* makes the label clickable */
+}
+
+input[type="checkbox"] + label::before {
+  content: "☀️"; /* default icon (sun) when dark mode is off */
+  margin-right: 0.5em;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "🌙"; /* changes to moon icon when dark mode is on */
+}
+
+/* ----- BASE ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* ensures consistent box sizing across elements */
+  font-family: 'Arial', sans-serif; /* apply arial font globally */
+}
+
+/* ----- SMOOTH SCROLL ----- */
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling for internal links */
+}
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: #e1e1e1; /* background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar thumb */
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* changes color on hover */
+}
+
+/*  global button design */
+.btn {
+  font-weight: 500; /* making button text semi-bold */
+  padding: 12px 20px; /* spacing inside the button */
+  background: var(--primary-color); /* using primary color */
+  color: var(--color-white); /* button text color */
+  border: none; /* removing border */
+  border-radius: 0; /* sharp corners */
+  cursor: pointer; /* changes cursor to pointer on hover */
+  transition: 0.4s; /* smooth transition for hover effects */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* adding shadow to the button */
+}
+
+.btn > i {
+  margin-left: 10px; /* space between icon and text inside button */
+}
+
+.btn:hover {
+  background: var(--primary-color-hover); /* changes background on hover */
+}
+
+.btn.secondary {
+  background: var(--secondary-color); /* using secondary color for specific buttons */
+}
+
+.btn.secondary:hover {
+  background: var(--secondary-color-hover); /* hover effect for secondary buttons */
+}
+
+.btn.accent {
+  background: var(--accent-color); /* using accent color for certain buttons */
+}
+
+.btn.accent:hover {
+  background: var(--accent-color-hover); /* hover effect for accent buttons */
+}
+
+/* ----- GLOBAL ICONS DESIGN ----- */
+i {
+  font-size: 16px; /* standard size for icons */
+}
+
+/* ------- BASE -------- */
+body {
+  background: var(--background-color-light); /* setting the background color */
+  color: var(--text-color-light); /* setting the text color */
+}
+
+.container {
+  width: 100%; /* container takes full width */
+  position: relative; /* relative positioning for internal alignment */
+}
+
+/* ----- NAVIGATION BAR ----- */
+nav {
+  position: fixed; /* fixes navbar at the top */
+  display: flex; /* flexbox layout for navigation */
+  justify-content: space-between; /* space between nav elements */
+  width: 100%; /* navbar spans the full width */
+  height: 90px; /* height of the navbar */
+  line-height: 90px; /* aligns text vertically in navbar */
+  background: var(--body-color); /* navbar background color */
+  padding-inline: 9vw; /* horizontal padding for navbar */
+  transition: 0.3s; /* smooth transition for background changes */
+  z-index: 100; /* ensures navbar stays on top */
+}
+
+.nav-logo {
+  position: relative; /* relative positioning for logo */
+}
+
+.nav-name {
+  font-size: 30px; /* size of the name in the nav bar */
+  font-weight: 600; /* bold font */
+  color: var(--primary-color); /* name color */
+}
+
+.nav-menu, .nav_menu_list {
+  display: flex; /* flexbox layout for menu */
+}
+
+.nav-menu .nav_list {
+  list-style: none; /* removes default list styling */
+  position: relative; /* relative positioning for menu items */
+}
+
+.nav-link {
+  text-decoration: none; /* removes underline from links */
+  color: var(--text-color-second); /* color of the links */
+  font-weight: 500; /* semi-bold text */
+  padding-inline: 15px; /* horizontal padding for links */
+  margin-inline: 20px; /* space between links */
+}
+
+/* ----- WRAPPER DESIGN ----- */
+.wrapper {
+  padding-inline: 10vw; /* horizontal padding for main content */
+}
+
+/* ----- FEATURED BOX ----- */
+.featured-box {
+  position: relative; /* relative positioning */
+  display: flex; /* flexbox layout */
+  flex-direction: column; /* column layout */
+  align-items: center; /* center alignment */
+  text-align: center; /* center text */
+  height: 100vh; /* full viewport height */
+  justify-content: center; /* center content vertically */
+}
+
+/* ----- FEATURED IMAGE BOX ----- */
+.featured-image {
+  margin-bottom: 20px; /* space below the image */
+}
+
+.image {
+  width: 300px; /* fixed width for the image */
+  height: 300px; /* fixed height for the image */
+  border-radius: 0; /* no rounded corners */
+  overflow: hidden; /* hides overflow content */
+  filter: grayscale(100%); /* converts image to grayscale */
+}
+
+.image img {
+  width: 100%; /* image takes full width */
+  height: 100%; /* image takes full height */
+  object-fit: cover; /* ensures image covers the area */
+}
+
+/* ----- FEATURED TEXT BOX ----- */
+.featured-text-card span {
+  background: var(--secondary-color); /* background color for text badge */
+  color: var(--color-white); /* text color */
+  padding: 3px 8px; /* padding inside the text badge */
+  font-size: 12px; /* small font size */
+  border-radius: 0; /* no rounded corners */
+}
+
+.featured-name {
+  font-size: 40px; /* large font for the name */
+  font-weight: 600; /* bold font */
+  color: var(--text-color-second); /* name color */
+  margin-block: 20px; /* space above and below the name */
+}
+
+.rotating-text {
+  display: inline-block; /* inline block for rotating text */
+  animation: rotateText 10s infinite linear; /* animation for rotating text */
+}
+
+@keyframes rotateText {
+  0%, 100% {
+      content: "Content Creator"; /* default text */
+  }
+  33% {
+      content: "Video Editor"; /* changes to video editor */
+  }
+  67% {
+      content: "Media Designer"; /* changes to media designer */
+  }
+}
+
+.featured-text-info {
+  font-size: 15px; /* size for the info text */
+  margin-bottom: 30px; /* space below the text */
+  color: var(--text-color-second); /* text color */
+}
+
+.featured-text-btn {
+  display: flex; /* flexbox layout for buttons */
+  gap: 20px; /* space between buttons */
+  justify-content: center; /* center the buttons */
+}
+
+.social_icons {
+  display: flex; /* flexbox layout for social icons */
+  justify-content: center; /* center the icons */
+  gap: 20px; /* space between icons */
+  margin-top: 20px; /* space above the icons */
+}
+
+.icon {
+  display: flex; /* flexbox layout for icons */
+  justify-content: center; /* center the icon content */
+  align-items: center; /* align icon content */
+  width: 40px; /* fixed width */
+  height: 40px; /* fixed height */
+  border-radius: 0; /* no rounded corners */
+  background: var(--color-white); /* background color */
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25); /* shadow for the icon */
+  cursor: pointer; /* pointer cursor on hover */
+}
+
+.icon:hover {
+  background: var(--primary-color); /* changes background on hover */
+  color: var(--color-white); /* changes text color on hover */
+}
+
+/* ----- SECTION DESIGN ----- */
+.section {
+  padding-block: 5em; /* vertical padding for sections */
+  text-align: center; /* center text in sections */
+}
+
+/* ----- ABOUT INFO ----- */
+.about-info {
+  display: flex; /* flexbox layout */
+  flex-direction: column; /* column layout */
+  align-items: center; /* center alignment */
+  padding: 20px; /* padding inside the section */
+  background: var(--color-white); /* white background */
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  border-radius: 0; /* no rounded corners */
+}
+
+.about-info p {
+  margin-bottom: 10px; /* space below paragraphs */
+}
+
+.about-info button {
+  margin-top: 20px; /* space above button */
+}
+
+/* ----- PROJECTS BOX ----- */
+.project-container {
+  display: flex; /* flexbox layout for project boxes */
+  justify-content: center; /* center the projects */
+  gap: 20px; /* space between project boxes */
+  flex-wrap: wrap; /* wrap projects in multiple lines if needed */
+}
+
+.project-box {
+  display: flex; /* flexbox layout */
+  flex-direction: column; /* column layout */
+  align-items: center; /* center alignment */
+  padding: 20px; /* padding inside the project box */
+  background: var(--color-white); /* white background */
+  border-radius: 0; /* no rounded corners */
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.project-box i {
+  font-size: 40px; /* large icon size */
+  color: var(--primary-color); /* icon color */
+  margin-bottom: 15px; /* space below the icon */
+}
+
+/* ----- CONTACT BOX ----- */
+.contact-info {
+  padding: 20px; /* padding inside the contact section */
+  background: var(--primary-color); /* background color */
+  border-radius: 0; /* no rounded corners */
+  color: var(--color-white); /* text color */
+}
+
+.contact-info p {
+  margin: 5px 0; /* space between paragraphs */
+}
+
+.form-control {
+  display: flex; /* flexbox layout */
+  flex-direction: column; /* column layout */
+  gap: 10px; /* space between form elements */
+  margin-top: 20px; /* space above the form */
+}
+
+.form-inputs {
+  display: flex; /* flexbox layout for input fields */
+  gap: 10px; /* space between input fields */
+}
+
+.input-field, textarea {
+  width: 100%; /* input fields take full width */
+  padding: 10px; /* padding inside input fields */
+  border: 2px solid #AAA; /* border around input fields */
+  border-radius: 0; /* no rounded corners */
+  outline: none; /* removes default outline */
+}
+
+textarea {
+  resize: none; /* disables resizing for the textarea */
+}
+
+/* ----- FOOTER BOX ----- */
+footer {
+  display: flex; /* flexbox layout */
+  flex-direction: column; /* column layout */
+  align-items: center; /* center alignment */
+  gap: 30px; /* space between footer elements */
+  background: #F8F8F8; /* light background color */
+  padding: 40px 20px; /* padding inside the footer */
+  text-align: center; /* center text */
+}
+
+.footer-menu {
+  display: flex; /* flexbox layout for footer links */
+  gap: 20px; /* space between footer links */
+}
+
+.footer_menu_list a {
+  text-decoration: none; /* removes underline from footer links */
+  color: var(--text-color-second); /* link color */
+  font-weight: 500; /* semi-bold text */
+}
+
+.footer-social-icons {
+  display: flex; /* flexbox layout for social icons in footer */
+  gap: 20px; /* space between social icons */
+}
+
+.bottom-footer {
+  font-size: 14px; /* small text size */
+}

@@ -183,6 +183,7 @@ nav {
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
+
 .featured-image {
   margin-bottom: 20px; /* space below the image */
 }
@@ -303,21 +304,27 @@ nav {
   flex-wrap: wrap; /* wrap projects in multiple lines if needed */
 }
 
-.project-box {
-  display: flex; /* flexbox layout */
-  flex-direction: column; /* column layout */
-  align-items: center; /* center alignment */
-  padding: 20px; /* padding inside the project box */
-  background: var(--color-white); /* white background */
-  border-radius: 0; /* no rounded corners */
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
-}
-
 .project-box i {
   font-size: 40px; /* large icon size */
   color: var(--primary-color); /* icon color */
   margin-bottom: 15px; /* space below the icon */
 }
+
+.mandala-container {
+  width: 320px; /* set the container width */
+  height: 240px; /* set the container height */
+  display: flex; /* use flexbox to center the image */
+  justify-content: center; /* horizontally center the image */
+  align-items: center; /* vertically center the image */
+}
+
+.mandala-image {
+  width: 100%; /* make the image fit the container width */
+  height: auto; /* maintain the aspect ratio of the image */
+  display: block; /* ensures the image is treated as a block element */
+  background: none; /* removes any background */
+}
+
 
 /* ----- CONTACT BOX ----- */
 .contact-info {
@@ -384,4 +391,36 @@ footer {
 
 .bottom-footer {
   font-size: 14px; /* small text size */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- ADDING BREATHING ANIMATION TO THE IMAGE ----- */
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out; /* smooth transition for the animation */
+}
+
+.image img:hover {
+  animation: breathe 3s infinite ease-in-out; /* applying the breathing animation on hover */
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1); /* normal size at start and end */
+  }
+  50% {
+    transform: scale(1.05); /* slight zoom in to create breathing effect */
+  }
 }
